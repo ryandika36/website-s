@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar HTML dan CSS</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #89cff0, #dfe7fd);
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        header {
+            background: #0077cc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #0077cc;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 15px;
+        }
+        ul li {
+            margin-left: 20px;
+            list-style: disc;
+        }
+        .code-box {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #0077cc;
+            margin-bottom: 15px;
+            font-family: monospace;
+            font-size: 1rem;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #e0f7fa;
+            border-left: 4px solid #0077cc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background: #0077cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #005fa3;
+        }
+        .interactive {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px dashed #0077cc;
+            border-radius: 10px;
+            background: #eef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dasar HTML dan CSS</h1>
+        </header>
+        <section>
+            <h2>Pengertian HTML</h2>
+            <p>
+                HTML (HyperText Markup Language) adalah bahasa markup standar untuk membuat halaman web.
+                HTML menggunakan elemen-elemen untuk membangun struktur dan konten sebuah halaman.
+            </p>
+            <p>Contoh elemen HTML:</p>
+            <ul>
+                <li><code>&lt;h1&gt;...&lt;/h1&gt;</code>: Elemen untuk membuat heading (judul).</li>
+                <li><code>&lt;p&gt;...&lt;/p&gt;</code>: Elemen untuk membuat paragraf.</li>
+                <li><code>&lt;a&gt;...&lt;/a&gt;</code>: Elemen untuk membuat tautan.</li>
+                <li><code>&lt;img&gt;</code>: Elemen untuk menambahkan gambar.</li>
+                <li><code>&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;</code>: Elemen untuk membuat daftar.</li>
+            </ul>
+
+            <h3>Contoh Kode HTML:</h3>
+            <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Belajar HTML&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Halo Dunia!&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Ini adalah paragraf pertama saya.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://google.com"&gt;Kunjungi Google&lt;/a&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+            </div>
+
+            <h2>Pengertian CSS</h2>
+            <p>
+                CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan gaya elemen HTML. 
+                Dengan CSS, Anda dapat mengubah warna teks, ukuran, tata letak, hingga animasi halaman.
+            </p>
+            <p>CSS dapat ditulis dalam tiga cara:</p>
+            <ul>
+                <li><strong>Inline CSS:</strong> Ditulis langsung di dalam elemen HTML menggunakan atribut <code>style</code>.</li>
+                <li><strong>Internal CSS:</strong> Ditulis dalam tag <code>&lt;style&gt;</code> di bagian <code>&lt;head&gt;</code>.</li>
+                <li><strong>External CSS:</strong> Ditulis di file terpisah dengan ekstensi <code>.css</code>.</li>
+            </ul>
+
+            <h3>Contoh Kode CSS:</h3>
+            <div class="code-box">
+body {<br>
+&nbsp;&nbsp;background-color: #f4f4f9;<br>
+&nbsp;&nbsp;color: #333;<br>
+&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+}<br><br>
+h1 {<br>
+&nbsp;&nbsp;color: #0077cc;<br>
+&nbsp;&nbsp;text-align: center;<br>
+}
+            </div>
+
+            <h2>HTML + CSS: Praktik Interaktif</h2>
+            <p>Klik tombol di bawah untuk melihat contoh HTML dan CSS bekerja bersama:</p>
+            <button onclick="showExample()">Tampilkan Contoh</button>
+            <div id="interactive" class="interactive">
+                <h1>Halo Dunia!</h1>
+                <p>Ini adalah contoh elemen HTML dengan gaya dari CSS.</p>
+                <p style="color: blue;">Teks ini diwarnai biru menggunakan <code>style</code> langsung.</p>
+            </div>
+
+            <h2>Struktur File HTML dan CSS</h2>
+            <p>Biasanya, file HTML dan CSS dipisahkan untuk mempermudah pengelolaan.</p>
+            <h3>File HTML:</h3>
+            <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Halo Dunia!&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+            </div>
+            <h3>File CSS:</h3>
+            <div class="code-box">
+body {<br>
+&nbsp;&nbsp;background-color: #eef;<br>
+&nbsp;&nbsp;color: #333;<br>
+}<br><br>
+h1 {<br>
+&nbsp;&nbsp;color: #0077cc;<br>
+}
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showExample() {
+            const example = document.getElementById("interactive");
+            example.style.display = "block";
+        }
+    </script>
+</body>
+</html>
